@@ -6,8 +6,8 @@ function movieInfo(args) {
 
     var movieTitle = "";
 
-    for (var i = 2; i < whatSayYou.length; i++) {
-        if (i > 2 && i < whatSayYou.length) {
+    for (var i = 3; i < whatSayYou.length; i++) {
+        if (i > 3 && i < whatSayYou.length) {
             movieTitle = movieTitle + "+" + whatSayYou[i];
         } else {
             movieTitle += whatSayYou[i];
