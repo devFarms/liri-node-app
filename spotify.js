@@ -1,28 +1,18 @@
-// DEPENDENCIES
-// =====================================
-// Read and set environment variables
 require("dotenv").config();
 var log = require('./log');
 
-// Import the node-spotify-api NPM package.
 var Spotify = require("node-spotify-api");
 
-// Import the API keys
 var keys = require("./keys");
 
-// Initialize the spotify API client using our client id and secret
 var spotify = new Spotify(keys.spotify);
 
-
-// FUNCTIONS
-// =====================================
 function getArtistNames(artists) {
     return artists.map(function(artist) {
         return artist.name;
     }).join(', ')
 }
 
-// Function for running a Spotify search
 var listenSpotify = function(args) {
 
     var songName = "";
